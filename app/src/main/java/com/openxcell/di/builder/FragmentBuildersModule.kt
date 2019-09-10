@@ -5,14 +5,12 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 @Suppress("unused")
-@Module
+@Module(includes = [ViewModelModule::class])
 abstract class FragmentBuildersModule {
 
 
     @ContributesAndroidInjector
     abstract fun contributeTestFragment(): UserFragment
-
-
 
 
 }

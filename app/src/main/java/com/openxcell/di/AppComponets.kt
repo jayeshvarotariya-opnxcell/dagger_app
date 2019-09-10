@@ -1,8 +1,8 @@
 package com.openxcell.di
 
 import android.app.Application
-import com.openxcell.DemoApp
-import com.openxcell.di.builder.AppModule
+import com.openxcell.MyApplication
+import com.openxcell.di.builder.app.AppModule
 import com.openxcell.di.builder.BuildersModule
 import dagger.BindsInstance
 import dagger.Component
@@ -26,6 +26,6 @@ interface AppComponets {
 
     }
 
-    fun inject(app:DemoApp)
+    fun inject(app:MyApplication)
 
 }

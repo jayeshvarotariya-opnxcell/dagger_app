@@ -1,10 +1,7 @@
-package com.openxcell.di.builder
+package com.openxcell.di.builder.app
 
 import com.openxcell.data.URLFactory
-import com.openxcell.data.datasource.CryptocurrencyDataSource
-import com.openxcell.data.repository.CryptocurrencyRepository
 import com.openxcell.data.source.remote.ApiInterface
-import com.openxcell.di.ViewModelModule
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -14,8 +11,8 @@ import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [ViewModelModule::class])
-class AppModule {
+@Module
+class NetModule {
 
     @Provides
     @Singleton
@@ -39,11 +36,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideApiInterface (retrofitClient: Retrofit) : ApiInterface = retrofitClient.create(ApiInterface::class.java)
+    fun provideApiInterface (retrofitClient: Retrofit) : ApiInterface = retrofitClient.create(
+        ApiInterface::class.java)
 
-
-    @Provides
-    @Singleton
-    fun provideCryptocurrencyRepository (cryptocurrencyDataSource: CryptocurrencyDataSource):CryptocurrencyRepository = cryptocurrencyDataSource
 
 }

@@ -37,8 +37,6 @@ g
 7app/src/main/java/com/openxcell/di/builder/AppModule.kt,c/6/c6a20cf0723d3e7b8ee8e4d4459004fe0fadd632
 `
 0app/src/main/java/com/openxcell/di/Injectable.kt,0/a/0a0b6ac035c2ca87956800674716d89ea9b3a464
-b
-2app/src/main/java/com/openxcell/ui/TestFragment.kt,b/3/b3f4ab6316fd6555ae2e9aeb632cc990521124ae
 g
 7app/src/main/java/com/openxcell/ui/base/BaseFragment.kt,3/a/3a2f7c9a852712de44b08b2b0f820a51dc996121
 Z
@@ -51,8 +49,6 @@ Y
 )app/src/main/res/layout/activity_main.xml,7/6/76b07e40f24cce093536731477540f12e7da3cb6
 X
 (app/src/main/res/layout/content_main.xml,7/c/7c023c74a9bce7eb3587d0708a1c0350f6266748
-Z
-*app/src/main/res/layout/login_fragment.xml,8/c/8c62f5c3fc0e9661f8dfe821a66f5bcf4d0056d5
 Z
 *app/src/main/res/layout/main_container.xml,0/5/05c110018c63fcf3954f3f62ebffa9034b4fc5fd
 S
@@ -94,3 +90,17 @@ t
 Dapp/src/test/java/com/openxcell/daggerapplication/ExampleUnitTest.kt,6/a/6aa669114d39aa2253d12a8c457c6d2a4cad9f9b
 @
 local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
+[
++app/src/main/res/layout/layout_fragment.xml,1/2/1231fe80dfeeebe94191a667dae80cebdb900897
+j
+:app/src/main/java/com/openxcell/di/builder/ViewModelKey.kt,c/0/c0d9e1f5ce60ffcc2b9d9c467917dd76080a6394
+q
+Aapp/src/main/java/com/openxcell/mainviewmodel/ViewModelFactory.kt,3/9/394c240f33444495bfaba4e148194828d81121db
+h
+8app/src/main/java/com/openxcell/ui/user/UserViewModel.kt,d/f/dfb5ba269b88883b2af0a754dce05dbdbd64933f
+m
+=app/src/main/java/com/openxcell/di/builder/ViewModelModule.kt,1/e/1e0dc81dea56b0c6bceff028e3d0e51095b804fb
+t
+Dapp/src/main/java/com/openxcell/di/builder/FragmentBuildersModule.kt,d/4/d4ac53abb16125f3303cf5149755bdd1fb66ee3b
+g
+7app/src/main/java/com/openxcell/ui/user/UserFragment.kt,d/8/d8830da677a8d8ef9c0ad8b820167adbb7de9eb7

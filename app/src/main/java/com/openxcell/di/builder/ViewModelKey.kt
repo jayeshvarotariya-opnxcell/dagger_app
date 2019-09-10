@@ -1,10 +1,10 @@
-package com.openxcell.di
+package com.openxcell.di.builder
 
 import androidx.lifecycle.ViewModel
 import dagger.MapKey
 import kotlin.reflect.KClass
 
-@MustBeDocumented
+
 @Target(
     AnnotationTarget.FUNCTION,
     AnnotationTarget.PROPERTY_GETTER,

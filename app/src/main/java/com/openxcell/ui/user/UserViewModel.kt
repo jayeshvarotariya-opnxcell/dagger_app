@@ -1,9 +1,12 @@
 package com.openxcell.ui.user
 
 import androidx.lifecycle.ViewModel
+import com.openxcell.data.SubscribeWithOutType
 import com.openxcell.data.pojo.CryptocurrencyEntity
 import com.openxcell.data.repository.CryptocurrencyRepository
+import io.reactivex.SingleObserver
 import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.disposables.Disposable
 import io.reactivex.observers.DisposableObserver
 import io.reactivex.schedulers.Schedulers
 import java.util.concurrent.TimeUnit
@@ -14,23 +17,13 @@ class UserViewModel @Inject constructor(private val userRepository: Cryptocurren
 
 
     fun callApi() {
+
         userRepository.getCryptocurrenciesFromApi()
             .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            .debounce(400, TimeUnit.MILLISECONDS)
-            .subscribe(object : DisposableObserver<List<CryptocurrencyEntity>>() {
-                override fun onComplete() {
+            .subscribe(SubscribeWithOutType())
 
-                }
-
-                override fun onNext(t: List<CryptocurrencyEntity>) {
-
-                }
-
-                override fun onError(e: Throwable) {
-                }
-
-            })
     }
+
+
 
 }

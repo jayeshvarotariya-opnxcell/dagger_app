@@ -8,22 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import com.openxcell.daggerapplication.R
-import com.openxcell.data.datasource.CryptocurrencyDataSource
-import com.openxcell.data.pojo.CryptocurrencyEntity
-import com.openxcell.data.repository.CryptocurrencyRepository
 import com.openxcell.di.Injectable
-import com.openxcell.mainviewmodel.ViewModelFactory
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.observers.DisposableObserver
-import io.reactivex.schedulers.Schedulers
-import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 class UserFragment : Fragment(), Injectable {
 
 
-    @Inject
-    lateinit var cryptocurrencyRepository: CryptocurrencyDataSource
+
 
 
     @Inject lateinit var  viewModelFactory: ViewModelProvider.Factory

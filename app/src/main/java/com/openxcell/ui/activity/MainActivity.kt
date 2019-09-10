@@ -1,8 +1,10 @@
 package com.openxcell.ui.activity
 
 import android.os.Bundle
+import android.view.View
 import androidx.fragment.app.Fragment
 import com.openxcell.daggerapplication.R
+import com.openxcell.di.builder.ViewModelKey
 import com.openxcell.ui.user.UserFragment
 import com.openxcell.ui.base.ToolBarActivity
 import dagger.android.AndroidInjector
@@ -17,10 +19,10 @@ class MainActivity : ToolBarActivity(), HasSupportFragmentInjector {
     @Inject
     lateinit var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>
 
-    override fun supportFragmentInjector(): AndroidInjector<Fragment> = dispatchingAndroidInjector
-
+    override fun supportFragmentInjector() = dispatchingAndroidInjector
 
     override fun getMainLayout(): Int = R.layout.activity_main
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -29,7 +31,11 @@ class MainActivity : ToolBarActivity(), HasSupportFragmentInjector {
             UserFragment()
         ).commit()
 
+        val view:View
+
     }
+
+
 
 
 }
