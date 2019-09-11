@@ -15,5 +15,4 @@ class AppModule {
     fun provideDataBaseName() : String ="my_app_db"
 
 
-
 }

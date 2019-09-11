@@ -16,8 +16,7 @@ class MyApplication : Application() , HasActivityInjector {
 
     override fun onCreate() {
         super.onCreate()
-
-     AppInjector.init(this)
+         AppInjector.init(this)
 
     }
 

@@ -1,19 +1,17 @@
 package com.openxcell.data.db
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.lifecycle.LiveData
+import androidx.room.*
 import com.openxcell.data.pojo.CryptocurrencyEntity
 
 
 @Dao
 interface CryptocurrencyDao {
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCryptocurrency(vararg cryptocurrency: CryptocurrencyEntity)
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertCryptocurrency(cryptocurrencys: List<CryptocurrencyEntity>)
 
     @Delete
@@ -22,5 +20,8 @@ interface CryptocurrencyDao {
     @Update
     fun updateCryptocurrency(cryptocurrency: CryptocurrencyEntity)
 
+
+    @Query("Select * from CryptocurrencyEntity")
+    fun getAllList() : LiveData<List<CryptocurrencyEntity>>
 
 }

@@ -1,5 +1,10 @@
 package com.openxcell.ui.base
 
-class BaseFragment {
+import androidx.fragment.app.Fragment
+
+
+open class BaseFragment : Fragment(){
+
+
 
 }
