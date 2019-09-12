@@ -1,7 +1,8 @@
 package com.openxcell.di.builder.app
 
 import com.openxcell.data.URLFactory
-import com.openxcell.data.source.remote.ApiInterface
+import com.openxcell.data.api.ApiInterface
+import com.openxcell.data.api.ErrorInterceptor
 import dagger.Module
 import dagger.Provides
 import okhttp3.OkHttpClient
@@ -18,6 +19,7 @@ class NetModule {
     @Singleton
     fun providesOkHttpClient(): OkHttpClient = OkHttpClient.Builder()
         .addInterceptor(provideHttpLoggingInterceptor())
+        .addInterceptor(ErrorInterceptor())
         .build()
 
     private fun provideHttpLoggingInterceptor(): HttpLoggingInterceptor {

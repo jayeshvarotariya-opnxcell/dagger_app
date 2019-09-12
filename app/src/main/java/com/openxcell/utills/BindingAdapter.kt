@@ -4,10 +4,11 @@ import android.view.View
 import androidx.databinding.BindingAdapter
 import com.google.android.material.snackbar.Snackbar
 import com.openxcell.daggerapplication.R
+import com.google.android.material.textfield.TextInputLayout
 
 
 @BindingAdapter("snackBar")
-fun setSnackBar(view: View, message: String? ) {
+fun setSnackBar(view: View, message: String?) {
 
     message?.let {
         val snackbar = Snackbar.make(view, "" + message, Snackbar.LENGTH_LONG)
@@ -17,4 +18,10 @@ fun setSnackBar(view: View, message: String? ) {
         snackbar.show()
     }
 
+}
+
+
+@BindingAdapter("app:errorText")
+fun setErrorMessage(view: TextInputLayout, errorMessage: String?) {
+        view.error = errorMessage
 }

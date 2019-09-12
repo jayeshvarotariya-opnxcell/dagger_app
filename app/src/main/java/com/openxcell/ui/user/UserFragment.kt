@@ -24,6 +24,8 @@ class UserFragment : BaseFragment(), Injectable {
 
     @Inject lateinit var sharedPrefsManager: SharedPrefsManager
 
+    lateinit var mBinding: LayoutFragmentBinding
+
 
     private val userViewModel: UserViewModel by viewModels {
         viewModelFactory
@@ -35,31 +37,27 @@ class UserFragment : BaseFragment(), Injectable {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        return LayoutFragmentBinding.inflate(inflater,container,false).root
+        mBinding= LayoutFragmentBinding.inflate(inflater,container,false)
+        return mBinding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         addLiveDataObserver()
         sharedPrefsManager.setString("Hello","hello")
-
     }
 
-    override fun onResume() {
-        super.onResume()
-        userViewModel.callApi()
-    }
 
     private fun addLiveDataObserver() {
+        mBinding.viewModel=userViewModel
+        mBinding.lifecycleOwner = viewLifecycleOwner
         userViewModel.getAllList()
             .observe(this, Observer {
                 println("This is list count $it" )
                 Logger.log("This is list count $it" )
 
             })
+
     }
 
 

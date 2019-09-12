@@ -21,6 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
+            app:errorText="@{viewModel.emailError}"
             android:layout_margin="30dp"
             app:layout_constraintVertical_chainStyle="packed"
             app:layout_constraintBottom_toTopOf="@+id/textInputPassword"
@@ -30,6 +31,7 @@
                 android:id="@+id/editTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="@={viewModel.email}"
                 android:inputType="textEmailAddress"/>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -45,6 +47,7 @@
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="30dp"
             android:hint="@string/password"
+            app:errorText="@{viewModel.passwordError}"
             app:layout_constraintBottom_toTopOf="@+id/buttonSubmit"
             app:layout_constraintTop_toBottomOf="@+id/textInputEmail">
 
@@ -52,7 +55,8 @@
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textEmailAddress"/>
+                android:text="@={viewModel.password}"
+                android:inputType="textPassword"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -65,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/submit"
+            android:onClick="@{viewModel::submit}"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 

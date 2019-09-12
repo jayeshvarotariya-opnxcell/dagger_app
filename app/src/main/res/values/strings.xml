@@ -4,4 +4,8 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="submit">Submit</string>
+    <string name="no_internet">Internet connection not available</string>
+    <string name="error_comman">Something went wrong please try again later</string>
+    <string name="blank_email">Please enter email</string>
+    <string name="blank_password">Please enter password</string>
 </resources>

@@ -19,6 +19,6 @@ class DataBaseModule {
 
     @Provides
     @Singleton
-    fun provideCryptocurrencyDao(myAppDataBase: AppDataBase) = myAppDataBase.provideCryptocurrencyDao()
+    fun provideUserDao(myAppDataBase: AppDataBase) = myAppDataBase.provideUserDao()
 
 }
