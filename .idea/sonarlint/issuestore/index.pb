@@ -15,8 +15,6 @@ b
 2app/src/main/java/com/openxcell/data/URLFactory.kt,0/4/048e9d5ab8caf47627b275c9b05840eb40714f60
 b
 2app/src/main/java/com/openxcell/di/AppComponets.kt,8/2/82f8d096b12a8e7f314c5156a04cb165db3c3c9a
-r
-Bapp/src/main/java/com/openxcell/data/source/remote/ApiInterface.kt,8/f/8fa7be8f0af353c10b6b264cb06f397377c4949b
 j
 :app/src/main/java/com/openxcell/ui/base/ToolBarActivity.kt,6/8/680b530c07e04ee51d9eb5b9ee8ebbf54f13aa87
 g
@@ -106,8 +104,6 @@ k
 ;app/src/main/java/com/openxcell/di/builder/app/NetModule.kt,1/2/12754ad822c96a7b97ba0ae739b8839f2ed3f519
 `
 0app/src/main/java/com/openxcell/MyApplication.kt,4/0/40d8495462baa5980e646bd751af9d2876eb604f
-l
-<app/src/main/java/com/openxcell/data/db/CryptocurrencyDao.kt,2/1/21a627460ef72079ed41a0c9b45f031c3c61cebb
 `
 0app/src/main/java/com/openxcell/utills/Logger.kt,2/1/21007a470a038c9453aebfa3e458a5fa9e999de0
 l
@@ -128,3 +124,13 @@ q
 Aapp/src/main/java/com/openxcell/data/datasource/AuthDataSource.kt,2/7/2748e77bad681ff671b10e952c8f8c62ec1754fa
 q
 Aapp/src/main/java/com/openxcell/data/repository/AuthRepository.kt,c/f/cf2e9cbfa97d171f4f8d5650f31b7484e2f77217
+h
+8app/src/main/java/com/openxcell/data/api/ApiInterface.kt,1/d/1dfc335ebceefe724e94f83eb3232d6590c5340f
+l
+<app/src/main/java/com/openxcell/data/api/ErrorInterceptor.kt,9/5/950d3a5922a89ddf5e928f862483e0b3aee770bf
+k
+;app/src/main/java/com/openxcell/data/api/ServerException.kt,5/c/5cfd0ae06e254ad09c458b6a966e2201be61b52f
+b
+2app/src/main/java/com/openxcell/data/db/UserDao.kt,2/c/2c9afeeecbae83b682c66983d56b482c2a2ab8dc
+k
+;app/src/main/java/com/openxcell/data/db/MyTypeConverters.kt,8/d/8d9a3e53aa3e24b501e528aeffdd7cf7134fc67d

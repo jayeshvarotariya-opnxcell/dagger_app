@@ -40,12 +40,16 @@ class UserViewModel @Inject constructor(private val authRepository: AuthReposito
         passwordError.set("")
         if (TextUtils.isEmpty(email.get())) {
             emailError.set(application.getString(R.string.blank_email))
+            emailError.notifyChange()
             return false
         }
         if (TextUtils.isEmpty(password.get())) {
-            emailError.set(application.getString(R.string.blank_password))
+            passwordError.set(application.getString(R.string.blank_password))
+            passwordError.notifyChange()
             return false
         }
+
+
         return true
     }
 

@@ -23,6 +23,7 @@ open class BaseViewModel : ViewModel() {
 
     override fun onCleared() {
         super.onCleared()
+
         if (!compositeDisposable.isDisposed)
             compositeDisposable.dispose()
     }

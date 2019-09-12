@@ -14,7 +14,6 @@ import com.openxcell.di.Injectable
 import com.openxcell.ui.base.BaseFragment
 import com.openxcell.utills.Logger
 import com.openxcell.utills.SharedPrefsManager
-import timber.log.Timber
 import javax.inject.Inject
 
 class UserFragment : BaseFragment(), Injectable {

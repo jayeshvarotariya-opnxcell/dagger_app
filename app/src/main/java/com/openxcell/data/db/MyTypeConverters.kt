@@ -20,10 +20,7 @@ object MyTypeConverters {
     @TypeConverter
     @JvmStatic
     fun userProfileToString(userProfile: UserProfile): String {
-        if (userProfile != null)
             return Gson().toJson(userProfile)
-        else
-            return ""
     }
 
 }
